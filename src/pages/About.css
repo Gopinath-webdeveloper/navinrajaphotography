@@ -1,0 +1,76 @@
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-image-wrapper {
+    flex: 1;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 4px;
+    /* Slight radius or 0 for sharp */
+    filter: grayscale(100%);
+    /* Make it black and white for style */
+    transition: filter 0.5s ease;
+}
+
+.about-image:hover {
+    filter: grayscale(0%);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-text h3 {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.bio {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.philosophy {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-left: 3px solid var(--accent-color);
+}
+
+.philosophy h4,
+.experience h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.experience ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image-wrapper {
+        margin-bottom: 2rem;
+    }
+}
